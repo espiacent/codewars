@@ -2,9 +2,10 @@ def validate_pin(pin):
 
     import re
     pin = str(pin).strip()
-    pattern1 = re.compile (r'^\d{4}$')
-    pattern2 = re.compile (r'^\d{6}$')
+    pattern1 = re.compile(r'^\d{4}$')
+    pattern2 = re.compile(r'^\d{6}$')
     return bool(pattern1.fullmatch(pin)) or bool(pattern2.fullmatch(pin))
+
 
 print(validate_pin('1234'))
 

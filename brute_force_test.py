@@ -2,6 +2,7 @@ import itertools
 import string
 import time
 
+
 def guess_password(real):
     start = time.perf_counter()
     chars = string.ascii_lowercase + string.digits
@@ -16,8 +17,10 @@ def guess_password(real):
             if guess == real:
                 end = round(time.perf_counter() - start)
                 length = len(real)
-                print ('Time needed was roughly {:,} seconds for password with {} chars.'.format(end, length))
+                print('Time needed was roughly {:,} seconds for password with {} chars.'.format(
+                    end, length))
                 return 'Password is {} and was found in {:,} guesses.'.format(guess, attempts)
+
 
 print(guess_password('123456'))
 

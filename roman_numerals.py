@@ -11,9 +11,9 @@ class RomanNumerals:
         else:
             # get quotient and divider (divmod)
             thousand = divmod(val, 1000)
-            hundred = divmod(thousand[1],100)
+            hundred = divmod(thousand[1], 100)
             ten = divmod(hundred[1], 10)
-            
+
             # get single digits
             one = thousand[0]
             print(one)
@@ -23,11 +23,11 @@ class RomanNumerals:
             print(three)
             four = ten[1]
             print(four)
-            
-            # turn digits into numerals 
+
+            # turn digits into numerals
             # thousand
             em = ("M" * one)
-            
+
             # hundred
             if two == 0:
                 ce = ""
@@ -41,7 +41,7 @@ class RomanNumerals:
                 ce = ("D" + ("C" * (two - 5)))
             elif two == 9:
                 ce = ("CM")
-                
+
             # ten
             if three == 0:
                 ex = ""
@@ -55,7 +55,7 @@ class RomanNumerals:
                 ex = ("L" + ("X" * (three - 5)))
             elif three == 9:
                 ex = ("XC")
-                
+
             # one
             if four == 0:
                 ei = ""
@@ -69,11 +69,11 @@ class RomanNumerals:
                 ei = ("V" + ("I" * (four - 5)))
             elif four == 9:
                 ei = ("IX")
-                
-            #put together
+
+            # put together
             all = (em + ce + ex + ei)
             return all
-                            
+
     def from_roman(roman_num):
         substring = "MMMM"
         # rule out edge cases (not roman numeral and/or too long)
@@ -135,7 +135,7 @@ class RomanNumerals:
                         roman_num = roman_num.replace("V", "")
                         print(result)
                         print(roman_num)
-                        
+
                 times_m = roman_num.count("M")
                 result += (1000 * times_m)
                 print(result)
@@ -153,6 +153,6 @@ class RomanNumerals:
                 print(result)
 
                 return(result)
-            
-print(RomanNumerals.to_roman(3847))
 
+
+print(RomanNumerals.to_roman(3847))

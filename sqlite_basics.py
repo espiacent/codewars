@@ -11,15 +11,16 @@ c.execute('''CREATE TABLE employees (
             pay integer
             )''')
 
+
 def insert_emp(emp):
     with conn:
-        c.execute("INSERT INTO employees VALUES (:first, :last, :pay)", {'first': emp.first, 'last' : emp.last, 'pay' : emp.pay})
-
+        c.execute("INSERT INTO employees VALUES (:first, :last, :pay)", {
+                  'first': emp.first, 'last': emp.last, 'pay': emp.pay})
 
 
 def get_emps_by_name(lastname):
-        c.execute("SELECT * FROM employees WHERE last=:last", {'last' : lastname})
-        return c.fetchall()
+    c.execute("SELECT * FROM employees WHERE last=:last", {'last': lastname})
+    return c.fetchall()
 
 
 def update_pay(emp, pay):
@@ -33,6 +34,7 @@ def remove_emp(emp):
     with conn:
         c.execute("DELETE from employees WHERE first = :first AND last = :last",
                   {'first': emp.first, 'last': emp.last})
+
 
 empl_1 = Employee('John', 'Doe', 30000)
 empl_2 = Employee('Jane', 'Doe', 90000)

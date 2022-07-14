@@ -3,7 +3,7 @@ import time
 fname = input('What ist your first name?')
 lname = input('What ist your last name?')
 
-name =f'{fname} {lname}'
+name = f'{fname} {lname}'
 print(f'Hello, {name.title()}!')
 print("Let's play a number guessing game!")
 

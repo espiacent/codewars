@@ -7,6 +7,7 @@ def sum_primes(n):
                 print(lst)
     print(sum(lst))
 
+
 sum_primes(2)
 sum_primes(5)
 sum_primes(39)

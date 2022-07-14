@@ -1,22 +1,22 @@
 def format_duration(n):
-    #assign variables
-    s,m,h,d,y = 0,0,0,0,0
+    # assign variables
+    s, m, h, d, y = 0, 0, 0, 0, 0
     date_range = ("Year", "Day", "Hour", "Minute", "Second")
     a = "and"
-    
-    #edge cases
+
+    # edge cases
     if n == 0:
         return "now"
     if n < 0:
         return None
-    #calculation and dictionary writing
+    # calculation and dictionary writing
     dates = []
     if n > 0:
         m, s = divmod(n, 60)
         h, m = divmod(m, 60)
         d, h = divmod(h, 24)
         y, d = divmod(d, 365)
-        
+
         if y == 0:
             None
         elif y == 1:
@@ -43,7 +43,7 @@ def format_duration(n):
             dates.append("Hours")
         if m == 0:
             None
-        elif m == 1: 
+        elif m == 1:
             dates.append(str(m))
             dates.append("Minute")
         elif m > 1:
@@ -51,18 +51,19 @@ def format_duration(n):
             dates.append("Minutes")
         if s == 0:
             None
-        elif s == 1: 
+        elif s == 1:
             dates.append(str(s))
             dates.append("Second")
         elif s > 1:
             dates.append(str(s))
             dates.append("Seconds")
-        
+
         if len(dates) > 2:
             dates_last = dates[-2:]
             dates_last = (" ".join(dates_last))
-            del dates[-2:]  
-            dates = (' '.join(l + ',' * (n % 2 == 1) for n, l in enumerate(dates)))
+            del dates[-2:]
+            dates = (' '.join(l + ',' * (n % 2 == 1)
+                     for n, l in enumerate(dates)))
             dates = dates[:-1]
             dates = dates + " and"
             dates = dates + " " + dates_last
@@ -72,5 +73,6 @@ def format_duration(n):
             print(" ".join(dates).strip())
             dates = (" ".join(dates).strip())
             return dates
-        
+
+
 format_duration(1030)

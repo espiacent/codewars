@@ -1,8 +1,8 @@
 def odd_triangle(n):
-    #edge case
+    # edge case
     if n == 1:
         return 1
-    #get length of list
+    # get length of list
     lst = []
     counter_a = 0
     base = 0
@@ -12,7 +12,7 @@ def odd_triangle(n):
         counter_a = counter_a + 1
     length_triangle = sum(lst)
 
-#generate list of odd numbers of this length
+# generate list of odd numbers of this length
     counter_b = 0
     next = 1
     odd_numbers = []
@@ -22,6 +22,7 @@ def odd_triangle(n):
         counter_b = counter_b + 1
     final_list = odd_numbers[-n-1:-1]
     return sum(final_list)
+
 
 print("My Solution:")
 print(odd_triangle(1))
@@ -33,9 +34,12 @@ print(odd_triangle(7))
 print(odd_triangle(12))
 print()
 
+
 def odd_triangle2(n):
-    #your code here
+    # your code here
     return n ** 3
+
+
 print("Easy/short solution:")
 print(odd_triangle2(1))
 print(odd_triangle2(2))
@@ -44,4 +48,3 @@ print(odd_triangle2(4))
 print(odd_triangle2(5))
 print(odd_triangle2(7))
 print(odd_triangle2(12))
-

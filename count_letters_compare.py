@@ -6,7 +6,7 @@ if len(chars) < 1:
 else:
     def split(chars):
         return list(chars)
-     
+
 print(chars)
 
 count_x = 0

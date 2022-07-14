@@ -1,5 +1,6 @@
 import time
 
+
 def tribonacci(signature, n):
     start_time = time.time()
     if n == 0:
@@ -32,4 +33,5 @@ def tribonacci(signature, n):
         print(time.time() - start_time)
         return(signature)
 
-tribonacci([1,2,3], 250000)
+
+tribonacci([1, 2, 3], 250000)

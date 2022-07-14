@@ -1,5 +1,5 @@
 def rgb_test(r, g, b):
-    #edge case = min or max rgb values
+    # edge case = min or max rgb values
     if r <= 0:
         r = 0
     elif r >= 255:
@@ -14,8 +14,8 @@ def rgb_test(r, g, b):
         b = 0
     elif b >= 255:
         b = 255
-    
-    #getting hex code from numbers
+
+    # getting hex code from numbers
     num_1 = int(r / 16)
     num_2 = (r % 16)
 
@@ -35,6 +35,7 @@ def rgb_test(r, g, b):
     hex_6 = hex(num_6)
 
     return (hex_1[2:] + hex_2[2:] + hex_3[2:] + hex_4[2:] + hex_5[2:] + hex_6[2:]).upper()
+
 
 print(rgb_test(255, 255, 255))
 print(rgb_test(-20, 255, 255))

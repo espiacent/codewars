@@ -1,4 +1,6 @@
 import pyperclip
+
+
 def testing(times):
     i = 1
     out = []
@@ -9,5 +11,6 @@ def testing(times):
         continue
     joined = "\n".join(out)
     pyperclip.copy(joined)
+
 
 testing(25)

@@ -5,12 +5,13 @@ def persistence(n):
         r = 1
         for i in x:
             f = int(i)
-            r *= f 
+            r *= f
         c += 1
         x = str(r)
-        
+
     print("Multiplicative Persistence of " + str(n) + ":")
     return c
+
 
 print(persistence(39))
 print()
@@ -21,4 +22,3 @@ print()
 print(persistence(3279))
 print()
 print(persistence(77777733332222222222222222222))
-

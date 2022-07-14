@@ -9,13 +9,14 @@ def is_prime(n):
                 break
     else:
         print("False")
-            
+
     if flag:
         print("False")
     else:
         print("True")
-    
-is_prime(1)    
+
+
+is_prime(1)
 is_prime(2)
 is_prime(3)
 is_prime(4)
