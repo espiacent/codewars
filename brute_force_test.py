@@ -22,7 +22,7 @@ def guess_password(real):
                 return 'Password is {} and was found in {:,} guesses.'.format(guess, attempts)
 
 
-print(guess_password('123456'))
+print(guess_password('auto123'))
 
 # make this work with actual files like pdf?
 # what about using generators?
